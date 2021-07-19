@@ -12,9 +12,9 @@ plugins:
   - serverless-kubeless
 
 functions:
-  list-user:
+  admin-api--list-user:
     handler: listUsers.handler
     description: "list all users"
-  create-user:
+  admin-api--create-user:
     handler: createUser.handler
     description: "create new user"
