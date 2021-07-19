@@ -1,5 +1,12 @@
 # An example on kubeless function deployment with serverless framework CLI
 
+## Prerequisites
+
+* Latest LTS NodeJS
+* K8S cluster running latest Kubeless
+* kubectl
+
+## How to?
 ```console
 $ npm install
 $ export KUBECONFIG=~/.kube/config
