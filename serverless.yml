@@ -1,0 +1,19 @@
+service: admin-api
+frameworkVersion: ^2.52.0
+
+provider:
+  name: kubeless
+  runtime: nodejs14
+  timeout: 360
+  namespace: test
+
+plugins:
+  - serverless-kubeless
+
+functions:
+  list-user:
+    handler: listUsers.handler
+    description: "list all users"
+  create-user:
+    handler: createUser.handler
+    description: "create new user"
