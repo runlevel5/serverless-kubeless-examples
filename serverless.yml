@@ -6,7 +6,7 @@ provider:
   name: kubeless
   runtime: nodejs14
   timeout: 360
-  namespace: test
+  namespace: ${opt:namespace, 'default'}
 
 plugins:
   - serverless-kubeless

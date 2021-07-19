@@ -10,12 +10,12 @@
 ```console
 $ npm install
 $ export KUBECONFIG=~/.kube/config
-$ aws-vault exec admin@dev-cluster -- kubectl create namespace test
-$ aws-vault exec admin@dev-cluster -- npx serverless deploy
-$ aws-vault exec admin@dev-cluster -- npx serverless invoke --function create-user --log --data 'hello world!'
+$ aws-vault exec admin@dev-cluster -- kubectl create namespace pr-app
+$ aws-vault exec admin@dev-cluster -- npx serverless deploy --namespace pr-app
+$ aws-vault exec admin@dev-cluster -- npx serverless invoke --function create-user --log --data 'hello world!' --namespace pr-app
 Serverless: Calling function: create-user...
 --------------------------------------------------------------------
 Hello world!
-$ aws-vault exec admin@dev-cluster -- serverless remove
-$ aws-vault exec admin@dev-cluster -- kubectl remove namespace test
+$ aws-vault exec admin@dev-cluster -- serverless remove --namespace pr-app
+$ aws-vault exec admin@dev-cluster -- kubectl remove namespace pr-app
 ```
