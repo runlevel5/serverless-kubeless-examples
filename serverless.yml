@@ -1,5 +1,6 @@
 service: admin-api
 frameworkVersion: ^2.52.0
+configValidationMode: off
 
 provider:
   name: kubeless
