@@ -23,3 +23,8 @@ $ aws-vault exec admin@dev-cluster -- kubeless trigger http create admin-api--li
 $ aws-vault exec admin@dev-cluster -- serverless remove --namespace pr-app
 $ aws-vault exec admin@dev-cluster -- kubectl remove namespace pr-app
 ```
+
+## TODO
+
+* Why can't function name in camelCase format? (the [doc](https://www.serverless.com/framework/docs/providers/kubeless/guide/intro/) shows that it is possible - could it be out of date?)
+* Is there any way to create trigger with serverless.yaml?
